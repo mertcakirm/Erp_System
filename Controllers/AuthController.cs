@@ -103,8 +103,8 @@ namespace Erp_System.Controllers
                 new Claim("tenant_id", tenant.Id.ToString()),
                 new Claim("tenant_name", tenant.Name)
             };
-
-            var secretKey = _configuration["Jwt:Key"];
+            
+            var secretKey = _configuration["JwtSettings:Key"];
             if (string.IsNullOrEmpty(secretKey))
                 throw new Exception("JWT Secret Key appsettings.json içinde tanımlanmadı.");
 

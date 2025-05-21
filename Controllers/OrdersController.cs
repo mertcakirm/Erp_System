@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Erp_System.Models;
 using Erp_System.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Erp_System.Controllers
 {
@@ -17,6 +18,7 @@ namespace Erp_System.Controllers
         }
 
         // GET: api/Orders
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Order>>> GetOrders()
         {
@@ -30,6 +32,7 @@ namespace Erp_System.Controllers
         }
 
         // GET: api/Orders/5
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<ActionResult<Order>> GetOrder(long id)
         {
@@ -47,6 +50,7 @@ namespace Erp_System.Controllers
         }
 
         // POST: api/Orders
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult<Order>> PostOrder(Order order)
         {
@@ -63,6 +67,7 @@ namespace Erp_System.Controllers
         }
 
         // PUT: api/Orders/5
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutOrder(long id, Order updatedOrder)
         {
@@ -91,6 +96,7 @@ namespace Erp_System.Controllers
         }
 
         // DELETE: api/Orders/5 (soft delete)
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteOrder(long id)
         {

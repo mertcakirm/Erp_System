@@ -1,5 +1,6 @@
 using Erp_System.Data;
 using Erp_System.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,6 +18,7 @@ namespace Erp_System.Controllers
         }
 
         // GET: api/Users
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
@@ -25,6 +27,7 @@ namespace Erp_System.Controllers
         }
 
         // GET: api/Users/5
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(long id)
         {
@@ -37,6 +40,7 @@ namespace Erp_System.Controllers
         }
 
         // POST: api/Users
+        [Authorize]
         [HttpPost]  
         public async Task<ActionResult<User>> PostUser(User user)
         {
@@ -47,6 +51,7 @@ namespace Erp_System.Controllers
         }
 
         // PUT: api/Users/5
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUser(long id, User user)
         {
@@ -71,6 +76,7 @@ namespace Erp_System.Controllers
         }
 
         // DELETE: api/Users/5
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(long id)
         {

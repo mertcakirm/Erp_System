@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Erp_System.Models;
 using Erp_System.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Erp_System.Controllers
 {
@@ -17,6 +18,7 @@ namespace Erp_System.Controllers
         }
 
         // GET: api/Products
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
@@ -27,6 +29,7 @@ namespace Erp_System.Controllers
         }
 
         // GET: api/Products/5
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<ActionResult<Product>> GetProduct(long id)
         {
@@ -41,6 +44,7 @@ namespace Erp_System.Controllers
         }
 
         // POST: api/Products
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult<Product>> PostProduct(Product product)
         {
@@ -54,6 +58,7 @@ namespace Erp_System.Controllers
         }
 
         // PUT: api/Products/5
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutProduct(long id, Product updatedProduct)
         {
@@ -79,6 +84,7 @@ namespace Erp_System.Controllers
         }
 
         // DELETE: api/Products/5 (soft delete)
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProduct(long id)
         {

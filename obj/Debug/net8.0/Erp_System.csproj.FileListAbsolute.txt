@@ -114,3 +114,7 @@
 /Users/mertcakir/RiderProjects/Erp_System/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
 /Users/mertcakir/RiderProjects/Erp_System/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
 /Users/mertcakir/RiderProjects/Erp_System/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/mertcakir/RiderProjects/Erp_System/obj/Debug/net8.0/Erp_System.sourcelink.json
+/Users/mertcakir/RiderProjects/Erp_System/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/mertcakir/RiderProjects/Erp_System/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/Users/mertcakir/RiderProjects/Erp_System/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
